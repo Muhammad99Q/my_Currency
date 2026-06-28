@@ -1,48 +1,81 @@
+*{
+  box-sizing: border-box;
+}
+
 body{
+  margin: 0;
+  min-height: 100vh;
   background-color: hsl(259, 83%, 9%);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  ;
-
+  padding: 16px;
 }
+
 .container{
+  width: min(100%, 520px);
   background-color: darkcyan;
   color: aliceblue;
-  
   border-radius: 20px;
-  
+  padding: 24px;
 }
 
-
-.container>*{
+.container > *{
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 50px;
-  
-  
+  gap: 16px;
+  padding: 16px 0;
 }
 
-.first-container>.first-input,.second-container>.second-input{
- background-color: transparent;
- color: rgb(238, 238, 238);
- outline: 0;
- border: 0;
- text-align: right;
- font-size: 30px;
-}
-.first-container>*,.second-container>*{
-  padding: 10px 20px;
+.first-container > *,
+.second-container > *{
+  padding: 10px 14px;
   border-radius: 7px;
   font-size: larger;
 }
 
+.first-container > .first-input,
+.second-container > .second-input{
+  width: 100%;
+  min-width: 0;
+  background-color: transparent;
+  color: rgb(238, 238, 238);
+  outline: 0;
+  border: 0;
+  text-align: right;
+  font-size: clamp(1.25rem, 4vw, 1.875rem);
+}
+
 select{
   outline: 0;
+  flex: 0 0 auto;
 }
 
 .Currrency-today{
   justify-content: center;
-  font-size: 25px;
+  text-align: center;
+  font-size: clamp(1rem, 3.5vw, 1.5625rem);
+}
+
+@media (max-width: 600px){
+  .container{
+    padding: 16px;
+  }
+
+  .container > *{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .first-container > *,
+  .second-container > *{
+    width: 100%;
+  }
+
+  .first-container > .first-input,
+  .second-container > .second-input{
+    text-align: left;
+  }
 }
