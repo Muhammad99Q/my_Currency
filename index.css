@@ -1,0 +1,48 @@
+body{
+  background-color: hsl(259, 83%, 9%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  ;
+
+}
+.container{
+  background-color: darkcyan;
+  color: aliceblue;
+  
+  border-radius: 20px;
+  
+}
+
+
+.container>*{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  
+  
+}
+
+.first-container>.first-input,.second-container>.second-input{
+ background-color: transparent;
+ color: rgb(238, 238, 238);
+ outline: 0;
+ border: 0;
+ text-align: right;
+ font-size: 30px;
+}
+.first-container>*,.second-container>*{
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-size: larger;
+}
+
+select{
+  outline: 0;
+}
+
+.Currrency-today{
+  justify-content: center;
+  font-size: 25px;
+}

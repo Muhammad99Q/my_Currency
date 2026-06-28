@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="first-container">
+  <select id="firstCurency">
+    <option id="USD" value="USD" selected>USD</option>
+    <option value="IQD">IQD</option>
+    <option value="AUD">AUD</option>
+  </select>
+  <input type="number" id="firstInput" class="first-input" value="1" min="1">
+</div>
+
+   <div class="second-container">
+  <select id="secondCurency">
+    <option id="USD" value="USD">USD</option>
+    <option value="IQD" selected>IQD</option>
+    <option value="AUD">AUD</option>
+  </select>
+  <input type="number" disabled id="secondInput" class="second-input">
+
+</div>
+<p class="Currrency-today" id="CurrrencyToday"> </p>
+</div>
+  
+  <script src="./index.js"></script>
+</body>
+</html>
